@@ -1,4 +1,32 @@
 /* main css file*/
-div{
-  font-size:20pt;
+body{
+  background-color: #3C3B3B;
+}
+#compass{
+  position: relative;
+}
+.compass-background, .compass-face, .compass-heading, .compass-top{
+  position: absolute;
+  top:0;
+  left:0;
+}
+
+.compass-face{
+  transform: rotate(0deg);
+}
+
+.compass-heading{
+  transform: rotate(0deg);
+}
+
+.field{
+  display:inline-block;
+  width: 150px;
+  border-bottom: 1px solid #F28F0E;
+  margin: 0 10px;
+  padding: 10px;
+}
+.btn-primary, .btn-primary:focus{
+  background-color: #B97C3A;
+  border-color: #B97C3A;
 }

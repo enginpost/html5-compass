@@ -3,12 +3,40 @@
   <head>
     <meta charset=utf-8>
     <title>base gulp project</title>
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
     <link rel="stylesheet" href="styles/main.css">
   </head>
   <body>
-  <div>hello world!</div>
-  <img src="images/html5-logo.png" alt="HTML5 logo">
+  <div class="container">
+    <div class="panel panel-default">
+      <div class="panel-heading"><strong>Your Location Information</strong></div>
+      <div class="panel-body">
+        <span class="label label-default"><label for="latitude">Latitude</label>:</span><div id="latitude" class="field">searching for you...</div>
+        <span class="label label-default"><label for="logitude">Longitude</label>:</span><div id="longitude" class="field">...</div>
+      </div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading"><strong>Select a destination</strong></div>
+      <div class="panel-body">
+        <div class="btn-group destinations" role="group">
+          <button type="button" class="btn btn-default" data-latitude="44.5192" data-longitude="-88.0198">Green Bay, WI</button>
+          <button type="button" class="btn btn-default" data-latitude="43.0731" data-longitude="-89.4012">Madison, WI</button>
+          <button type="button" class="btn btn-default" data-latitude="40.7128" data-longitude="74.0059">New York City, NY</button>
+          <button type="button" class="btn btn-default" data-latitude="44.5254" data-longitude="-89.5537">Stevens Point, WI</button>
+        </div>
+      </div>
+    </div>
+    <div id="compass">
+      <img src="images/compass-background.png" alt="" class="compass compass-background">
+      <img src="images/compass-face.png" alt="" class="compass compass-face">
+      <img src="images/compass-heading.png" alt="" class="compass compass-heading">
+      <img src="images/compass-top.png" alt="" class="compass compass-top">
+    </div>
+  </div>
   <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script type="text/javascript" src="scripts/bootstrap.min.js"></script>
+  <script type="text/javascript" src="scripts/modernizr-custom.js"></script>
+  <script type="text/javascript" src="scripts/compass.js"></script>
   <script type="text/javascript" src="scripts/main.js"></script>
   </body>
 </html>
