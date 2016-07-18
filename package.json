@@ -1,0 +1,15 @@
+{
+  "name": "base_gulp_project",
+  "version": "1.0.0",
+  "description": "Used to start new projects with gulp",
+  "main": "site/index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.13.0",
+    "gulp": "^3.9.1"
+  }
+}
