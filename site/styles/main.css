@@ -1,11 +1,22 @@
 /* main css file*/
-body{
-  background-color: #3C3B3B;
+.page-header{
+  margin-top: 0;
+}
+h1{
+  margin-top: 5px;
+  text-align:center;
 }
 #compass{
   position: relative;
+  background-color: #3C3B3B;
+  width: 100%;
 }
-.compass-background, .compass-face, .compass-heading, .compass-top{
+#compass img{
+  width: 100%;
+  height: auto;
+}
+.compass-background, .compass-face, 
+.compass-heading, .compass-top{
   position: absolute;
   top:0;
   left:0;
@@ -21,10 +32,9 @@ body{
 
 .field{
   display:inline-block;
-  width: 150px;
   border-bottom: 1px solid #F28F0E;
-  margin: 0 10px;
-  padding: 10px;
+  margin: 0 5px;
+  padding: 5px 5px 0 5px;
 }
 .btn-primary, .btn-primary:focus{
   background-color: #B97C3A;

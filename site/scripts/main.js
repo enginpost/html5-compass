@@ -10,7 +10,7 @@
 
   function getLocation(){
     if ( Modernizr.geolocation ) {
-      navigator.geolocation.getCurrentPosition( displayLocation );
+      navigator.geolocation.getCurrentPosition( displayLocation, function(error){ alert(error.message)}, {enableHighAccurancy:true, timeout:5000} );
       updateUserPosition();
     } else {
       alert("your device does not support geolocation identification");
@@ -56,9 +56,11 @@
                                                                 Number($(".destinations .btn-primary").attr('data-longitude')) ) );
   }
   function setupDestinationClickEvent(){
-    $(".destinations button").on("click", function(evt){
-      $(".destinations button").removeClass('btn-primary');
+    $(".destinations a").on("click", function(evt){
+      evt.preventDefault();
+      $(".destinations a.btn-primary").removeClass('btn-primary');
       $(this).addClass('btn-primary');
+      $(".selected-destination").html($(this).html());
       getCompassHeading();
       orientDevice();
     })
